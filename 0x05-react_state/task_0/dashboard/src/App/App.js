@@ -17,9 +17,15 @@ class App extends React.Component {
     this.state = { displayDrawer: false };
 
     this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
-    this.handleHideDrawer = this.handleHideDrawer.bind(this);
-  }
+    }
+  
+  handleDisplayDrawer = () => {
+    this.setState({ displayDrawer: true });
+  };
+
+  handleHideDrawer = () => {
+    this.setState({ displayDrawer: false });
+  };
 
   listCourses = [
     { id: 1, name: "ES6", credit: 60 },
